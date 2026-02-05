@@ -66,9 +66,9 @@ a {
 
 .hero-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
   gap: 3rem;
-  align-items: center;
+  align-items: start;
 }
 
 .hero-text h1 {
@@ -161,6 +161,7 @@ a {
   box-shadow: var(--shadow);
   display: grid;
   gap: 1.5rem;
+  align-self: start;
 }
 
 .avatar {
@@ -331,6 +332,12 @@ a {
   justify-items: start;
 }
 
+.footer-actions .button {
+  background: #ffffff;
+  color: var(--primary-dark);
+  box-shadow: none;
+}
+
 .footer-actions span {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.8);
@@ -345,6 +352,10 @@ a {
 
   .nav-links {
     flex-wrap: wrap;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
   }
 
   .hero-card {
